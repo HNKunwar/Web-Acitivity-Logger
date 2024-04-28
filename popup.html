@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Study Tracker</title>
+    <style>
+
+      body {
+        display: flex;
+        justify-content: center;
+        width: 400px;
+      }
+      h1, section {
+        width: 60%;
+        padding: 0 20px;
+        align-content: center;
+      }
+
+      #message {
+        display: none;
+        padding: 10px;
+        background-color: #f44336;
+        color: white;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        font-size: 28px;
+        color: #333;
+        text-align: center;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        margin-right: 10px;
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      button {
+        padding: 5px 10px;
+        background-color: #4caf50;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        width: 100%;
+        margin-right: 10px;
+        align-items: center;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      #add-class,
+      #add-location {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+
+      .toggle-active {
+        color: #4caf50;
+        font-weight: bold;
+      }
+      .class-item,
+      .location-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+      .class-name,
+      .location-name,
+      .nickname {
+        margin-right: 10px;
+        cursor: pointer;
+        flex-grow: 1;
+      }
+      .class-item:hover,
+      .location-item:hover {
+        background-color: #e0e0e0;
+      }
+
+      .remove-btn {
+        background-color: #f44336;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+      .remove-btn:hover {
+        background-color: #d32f2f;
+      }
+      .edit-nickname-btn {
+        background-color: #2196f3;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+      .edit-nickname-btn:hover {
+        background-color: #0d8bf2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Study Tracker</h1>
+    <p id="location"></p>
+    <section>
+      <h2>Classes</h2>
+      <div>
+        <input type="text" id="class-name" placeholder="Class Name" />
+        <button id="add-class">Add Class</button>
+      </div>
+      <div id="classes-list"></div>
+    </section>
+    <section>
+      <h2>Locations</h2>
+      <div>
+        <input type="text" id="location-name" placeholder="Location Name" />
+        <button id="add-location">Add Location</button>
+      </div>
+      <div id="locations-list"></div>
+    </section>
+
+    <div id="location-info"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>
